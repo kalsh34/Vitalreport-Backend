@@ -1,0 +1,200 @@
+export const ROLES = {
+  SUPER_ADMIN: 'SUPER_ADMIN',
+  CONTROL_ROOM_ADMIN: 'CONTROL_ROOM_ADMIN',
+  CONTROL_ROOM_OPERATOR: 'CONTROL_ROOM_OPERATOR',
+  SUPERVISOR: 'SUPERVISOR',
+  CEO: 'CEO',
+  GENERAL_MANAGER: 'GENERAL_MANAGER',
+  OPERATIONS_MANAGER: 'OPERATIONS_MANAGER',
+  SECURITY_MANAGER: 'SECURITY_MANAGER',
+  REGIONAL_MANAGER: 'REGIONAL_MANAGER',
+  SITE_MANAGER: 'SITE_MANAGER',
+  GUARD: 'GUARD'
+};
+
+export const PERMISSIONS = [
+  'VIEW_DAILY_REPORTS',
+  'VIEW_WEEKLY_REPORTS',
+  'VIEW_MONTHLY_REPORTS',
+  'CREATE_DAILY_REPORTS',
+  'CREATE_WEEKLY_REPORTS',
+  'CREATE_MONTHLY_REPORTS',
+  'EDIT_DAILY_REPORTS',
+  'EDIT_WEEKLY_REPORTS',
+  'EDIT_MONTHLY_REPORTS',
+  'DELETE_DAILY_REPORTS',
+  'DELETE_WEEKLY_REPORTS',
+  'DELETE_MONTHLY_REPORTS',
+  'APPROVE_DAILY_REPORTS',
+  'APPROVE_WEEKLY_REPORTS',
+  'APPROVE_MONTHLY_REPORTS',
+  'PUBLISH_REPORTS',
+  'VIEW_INCIDENTS',
+  'CREATE_INCIDENTS',
+  'EDIT_INCIDENTS',
+  'DELETE_INCIDENTS',
+  'ESCALATE_INCIDENTS',
+  'RESOLVE_INCIDENTS',
+  'VIEW_AES_EVENTS',
+  'MANAGE_AES_EVENTS',
+  'ACKNOWLEDGE_AES_EVENTS',
+  'VIEW_GUARDS',
+  'MANAGE_GUARDS',
+  'VIEW_SITES',
+  'MANAGE_SITES',
+  'VIEW_POSTS',
+  'MANAGE_POSTS',
+  'VIEW_SHIFTS',
+  'MANAGE_SHIFTS',
+  'VIEW_PATROLS',
+  'MANAGE_PATROLS',
+  'VIEW_GPS_TRACKING',
+  'MANAGE_GPS_TRACKING',
+  'VIEW_RADIO_COMMUNICATIONS',
+  'MANAGE_RADIO_COMMUNICATIONS',
+  'VIEW_CONTROL_ROOM_LOGS',
+  'MANAGE_CONTROL_ROOM_LOGS',
+  'VIEW_KPI_DASHBOARDS',
+  'VIEW_GUARD_REPORTS',
+  'CREATE_GUARD_REPORTS',
+  'EDIT_GUARD_REPORTS',
+  'APPROVE_GUARD_REPORTS',
+  'VIEW_USERS',
+  'MANAGE_USERS',
+  'VIEW_ROLES',
+  'MANAGE_ROLES',
+  'VIEW_AUDIT_LOGS',
+  'VIEW_NOTIFICATIONS',
+  'MANAGE_NOTIFICATIONS',
+  'VIEW_SETTINGS',
+  'MANAGE_SETTINGS',
+  'VIEW_ANALYTICS',
+  'EXPORT_REPORTS',
+  'VIEW_CLIENT_PORTAL',
+  'MANAGE_CLIENT_PORTAL',
+  'EMERGENCY_OVERRIDE',
+  'SYSTEM_ADMINISTRATION'
+];
+
+export const REPORT_CATEGORIES = [
+  'GENERAL',
+  'INCIDENT',
+  'PATROL',
+  'SHIFT_CHANGE',
+  'MAINTENANCE',
+  'SAFETY',
+  'THEFT',
+  'VANDALISM',
+  'TRESPASSING',
+  'MEDICAL_EMERGENCY',
+  'FIRE',
+  'ALARM',
+  'SUSPICIOUS_ACTIVITY',
+  'CUSTOMER_COMPLAINT',
+  'EQUIPMENT_FAILURE',
+  'WEATHER',
+  'OTHER'
+];
+
+export const REPORT_STATUSES = [
+  'DRAFT',
+  'SUBMITTED',
+  'UNDER_REVIEW',
+  'RETURNED',
+  'APPROVED',
+  'ESCALATED',
+  'CLOSED'
+];
+
+export const INCIDENT_SEVERITIES = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'];
+
+export const INCIDENT_STATUSES = ['OPEN', 'INVESTIGATING', 'ESCALATED', 'RESOLVED', 'CLOSED'];
+
+export const AES_ALARM_TYPES = [
+  'BURGLARY',
+  'PANIC',
+  'FIRE',
+  'MEDICAL',
+  'TAMPER',
+  'POWER',
+  'COMMUNICATION_FAILURE',
+  'OTHER'
+];
+
+export const AES_STATUSES = ['RECEIVED', 'VERIFIED', 'ESCALATED', 'RESOLVED', 'FALSE_ALARM'];
+
+export const SHIFT_STATUSES = ['SCHEDULED', 'ACTIVE', 'COMPLETED', 'MISSED', 'CANCELLED'];
+
+export const GUARD_STATUSES = [
+  'OFF_DUTY',
+  'ON_DUTY',
+  'ONLINE',
+  'STALE',
+  'OFFLINE',
+  'OUTSIDE_GEOFENCE',
+  'NO_LOCATION',
+  'SUSPENDED'
+];
+
+export const LOCATION_STATUSES = ['INSIDE_GEOFENCE', 'OUTSIDE_GEOFENCE'];
+
+export const REPORT_DOC_STATUSES = [
+  'DRAFT',
+  'UNDER_REVIEW',
+  'APPROVED',
+  'RETURNED',
+  'PUBLISHED',
+  'ARCHIVED'
+];
+
+export const GUARD_REPORT_STATUSES = [
+  'DRAFT',
+  'SUBMITTED',
+  'UNDER_REVIEW',
+  'RETURNED',
+  'APPROVED',
+  'ESCALATED',
+  'CLOSED'
+];
+
+export const KPI_THRESHOLDS = {
+  alarmResponseTime: { green: 60, yellow: 120, red: 180 },
+  alarmVerificationTime: { green: 180, yellow: 300, red: 600 },
+  emergencyEscalationTime: { green: 120, yellow: 180, red: 300 },
+  falseAlarmRate: { green: 10, yellow: 20, red: 30 },
+  unverifiedAlarmRate: { green: 2, yellow: 5, red: 10 },
+  qrPatrolCompliance: { green: 90, yellow: 80, red: 70 },
+  communicationResponseTime: { green: 30, yellow: 60, red: 120 },
+  radioAvailability: { green: 99, yellow: 95, red: 90 }
+};
+
+export const GUARD_ACCOUNTABILITY_WEIGHTS = {
+  qrPatrol: 25,
+  attendance: 25,
+  communication: 25,
+  reporting: 25
+};
+
+export const CONTROL_ROOM_SCORE_WEIGHTS = {
+  guardAccountability: 15,
+  alarmEmergencyResponse: 20,
+  incidentManagement: 20,
+  reportingAccuracy: 15,
+  communication: 10,
+  systemUptime: 10,
+  customerService: 10
+};
+
+export const STALE_THRESHOLD_MINUTES = 5;
+export const ONLINE_THRESHOLD_MINUTES = 2;
+
+export const TARGETS = {
+  alarmResponseTime: 60,
+  alarmVerificationTime: 180,
+  emergencyEscalationTime: 120,
+  falseAlarmRate: 10,
+  unverifiedAlarmRate: 2,
+  qrPatrolCompliance: 90,
+  communicationResponseTime: 30,
+  radioAvailability: 99
+};

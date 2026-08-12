@@ -1,0 +1,25 @@
+import './Permission.js';
+import './Role.js';
+import './User.js';
+import './Guard.js';
+import './Site.js';
+import './Post.js';
+import './Shift.js';
+import './GuardLocation.js';
+import './PatrolRoute.js';
+import './PatrolCheckpoint.js';
+import './PatrolSchedule.js';
+import './PatrolEvent.js';
+import './GuardReport.js';
+import './Incident.js';
+import './AESEvent.js';
+import './RadioCommunication.js';
+import './ControlRoomLog.js';
+import './DailyReport.js';
+import './WeeklyReport.js';
+import './MonthlyReport.js';
+import './KPISnapshot.js';
+import './Notification.js';
+import './AuditLog.js';
+
+console.log('All models registered');

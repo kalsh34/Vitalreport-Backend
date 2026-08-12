@@ -1,0 +1,43 @@
+import authRoutes from './auth.js';
+import userRoutes from './users.js';
+import roleRoutes from './roles.js';
+import guardRoutes from './guards.js';
+import siteRoutes from './sites.js';
+import postRoutes from './posts.js';
+import shiftRoutes from './shifts.js';
+import gpsRoutes from './gps.js';
+import patrolRoutes from './patrol.js';
+import guardReportRoutes from './guardReports.js';
+import incidentRoutes from './incidents.js';
+import aesRoutes from './aes.js';
+import radioRoutes from './radio.js';
+import controlRoomRoutes from './controlRoom.js';
+import reportRoutes from './reports.js';
+import kpiRoutes from './kpis.js';
+import dashboardRoutes from './dashboard.js';
+import notificationRoutes from './notifications.js';
+import auditLogRoutes from './auditLogs.js';
+
+const mountRoutes = (app) => {
+  app.use('/api/auth', authRoutes);
+  app.use('/api/users', userRoutes);
+  app.use('/api/roles', roleRoutes);
+  app.use('/api/guards', guardRoutes);
+  app.use('/api/sites', siteRoutes);
+  app.use('/api/posts', postRoutes);
+  app.use('/api/shifts', shiftRoutes);
+  app.use('/api/gps', gpsRoutes);
+  app.use('/api/patrol', patrolRoutes);
+  app.use('/api/guard-reports', guardReportRoutes);
+  app.use('/api/incidents', incidentRoutes);
+  app.use('/api/aes', aesRoutes);
+  app.use('/api/radio', radioRoutes);
+  app.use('/api/control-room', controlRoomRoutes);
+  app.use('/api/reports', reportRoutes);
+  app.use('/api/kpis', kpiRoutes);
+  app.use('/api/dashboard', dashboardRoutes);
+  app.use('/api/notifications', notificationRoutes);
+  app.use('/api/audit-logs', auditLogRoutes);
+};
+
+export default mountRoutes;
